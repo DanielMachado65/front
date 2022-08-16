@@ -36,12 +36,23 @@
 
 <script>
 import { UserService } from "@/services";
+import { showError, showSuccess } from "@/global";
 
 export default {
   name: "SubscribeComponent",
   methods: {
-    submit: () => {
-      UserService.all();
+    submit() {
+      if (this.user.email == undefined) showError("O e-mail está vazio");
+      if (this.user.name == undefined) showError("O nome está vazio");
+
+      if (this.user.email && this.user.name)
+        UserService.create(this.user)
+          .then(() => {
+            showSuccess("deu boa");
+          })
+          .catch((e) => {
+            showError(e);
+          });
     },
   },
   data: () => ({
