@@ -34,3 +34,30 @@ export default {
   },
 };
 </script>
+
+<style>
+:root {
+  --webkit-font-smoothing: antialiased;
+  --moz-ozx-font-smoothing: grayscale;
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+::-webkit-scrollbar-thumb {
+  background: purple;
+}
+</style>

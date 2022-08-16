@@ -50,9 +50,7 @@ export default {
           .then(() => {
             showSuccess("deu boa");
           })
-          .catch((e) => {
-            showError(e);
-          });
+          .catch(showError);
     },
   },
   data: () => ({
