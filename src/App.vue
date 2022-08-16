@@ -9,8 +9,8 @@
         <!-- footer  -->
         <Testimonies />
         <Subscribe />
-        <Footer />
       </v-container>
+      <Footer />
     </v-main>
   </v-app>
 </template>

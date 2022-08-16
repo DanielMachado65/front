@@ -35,11 +35,13 @@
 </template>
 
 <script>
+import { UserService } from "@/services";
+
 export default {
   name: "SubscribeComponent",
   methods: {
     submit: () => {
-      console.log("submit");
+      UserService.all();
     },
   },
   data: () => ({
