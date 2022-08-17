@@ -7,8 +7,7 @@
         >
 
         <v-card-text class="text-center white--text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
-          sed aliquid
+          Inscreva-se para fazer parte desse evento mais do que maravilhoso.
         </v-card-text>
 
         <v-card-text>
@@ -30,8 +29,8 @@
           />
         </v-card-text>
 
-        <v-card-actions class="justify-center">
-          <v-btn @click="submit" rounded width="200"> Enviar! </v-btn>
+        <v-card-actions class="justify-center pb-5">
+          <v-btn color="white" class="black--text" @click="submit" width="200"> Enviar! </v-btn>
         </v-card-actions>
       </v-card>
     </v-col>

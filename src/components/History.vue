@@ -26,20 +26,16 @@ export default {
   data: () => ({
     items: [
       {
-        title: "Lorem Ipsum",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus optio ipsum aut quisquam aperiam incidunt exercitationem, nemo excepturi commodi esse nobis iste doloremque, sunt nesciunt nisi eligendi, deserunt quasi recusandae!",
+        title: ". 2019",
+        text: " Evento aconteceu e foi incrivel, realente uma experiencia com Deus",
       },
       {
-        title: "Lorem Ipsum",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus optio ipsum aut quisquam aperiam incidunt exercitationem, nemo excepturi commodi esse nobis iste doloremque, sunt nesciunt nisi eligendi, deserunt quasi recusandae!",
+        title: ". 2020 ",
+        text: " Evento realmente pegou fogo de tão esperitual que foi",
       },
       {
-        title: "Lorem Ipsum",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus optio ipsum aut quisquam aperiam incidunt exercitationem, nemo excepturi commodi esse nobis iste doloremque, sunt nesciunt nisi eligendi, deserunt quasi recusandae!",
-      },
-      {
-        title: "Lorem Ipsum",
-        text: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus optio ipsum aut quisquam aperiam incidunt exercitationem, nemo excepturi commodi esse nobis iste doloremque, sunt nesciunt nisi eligendi, deserunt quasi recusandae!",
+        title: ". 2023 ",
+        text: " Esse vai ser o evento de encerramento",
       },
     ],
   }),
