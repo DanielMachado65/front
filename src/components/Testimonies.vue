@@ -13,13 +13,13 @@
       >
         <v-card color="primary" elevation="10">
           <v-card-title>
-            <iframe
+            <!-- <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/y881t8ilMyc"
+              :src="item.url"
               frameborder="0"
               allowfullscreen
-            ></iframe>
+            ></iframe> -->
           </v-card-title>
         </v-card>
       </v-col>
