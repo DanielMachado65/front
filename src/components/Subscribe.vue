@@ -1,37 +1,41 @@
 <template>
-  <v-card class="mx-auto my-12 deep-purple" elevation="5">
-    <v-card-title class="justify-center white--text"
-      >Se inscreva já!</v-card-title
-    >
+  <v-row justify="center">
+    <v-col cols="12" md="8">
+      <v-card class="mx-auto my-12 primary subscribe" elevation="10">
+        <v-card-title class="justify-center white--text"
+          >Se inscreva já!</v-card-title
+        >
 
-    <v-card-text class="text-center white--text">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam sed
-      aliquid
-    </v-card-text>
+        <v-card-text class="text-center white--text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+          sed aliquid
+        </v-card-text>
 
-    <v-card-text>
-      <v-text-field
-        color="white"
-        label="Name"
-        outlined
-        v-model="user.name"
-        :rules="[rules.required]"
-        required
-      />
-      <v-text-field
-        color="white"
-        label="E-mail"
-        outlined
-        v-model="user.email"
-        :rules="[rules.required, rules.email]"
-        required
-      />
-    </v-card-text>
+        <v-card-text>
+          <v-text-field
+            color="white"
+            label="Name"
+            outlined
+            v-model="user.name"
+            :rules="[rules.required]"
+            required
+          />
+          <v-text-field
+            color="white"
+            label="E-mail"
+            outlined
+            v-model="user.email"
+            :rules="[rules.required, rules.email]"
+            required
+          />
+        </v-card-text>
 
-    <v-card-actions class="justify-center">
-      <v-btn @click="submit" rounded width="200"> Enviar! </v-btn>
-    </v-card-actions>
-  </v-card>
+        <v-card-actions class="justify-center">
+          <v-btn @click="submit" rounded width="200"> Enviar! </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-col>
+  </v-row>
 </template>
 
 <script>
@@ -66,3 +70,9 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+.subscribe {
+  box-shadow: 10px 16px 0px 0 #200038 !important;
+}
+</style>

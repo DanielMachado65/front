@@ -8,7 +8,7 @@
       transition="slide-x-transation"
       fill-dot
     >
-      <v-card color="primary">
+      <v-card color="primary" class="history" elevation="10">
         <v-card-title class="text-h6">{{ item.title }}</v-card-title>
         <v-card-text>
           <p>
@@ -50,3 +50,9 @@ export default {
   }),
 };
 </script>
+
+<style scoped>
+.history {
+  box-shadow: 10px 16px 0px 0 #200038 !important;
+}
+</style>

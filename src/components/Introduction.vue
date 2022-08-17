@@ -1,9 +1,12 @@
 <template>
   <div id="title-introduction" class="d-flex justify-center align-center">
-    <p class="text-h4">
-      "Ore Menos para encontrar a pessoa certa e mais para que voce seja a
-      pessoa certa."
-    </p>
+    <div class="d-flex justify-center align-center flex-column">
+      <p class="text-h1">Børn</p>
+      <p class="text-h5">
+        "Ore Menos para encontrar a pessoa certa e mais para que voce seja a
+        pessoa certa."
+      </p>
+    </div>
   </div>
 </template>
 

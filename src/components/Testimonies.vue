@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="mb-5 text-h3">Depoimentos</h3>
+    <h4 class="mb-10 mt-10 text-h4">Depoimentos</h4>
     <v-row>
       <v-col
         class="testimonies"
@@ -11,7 +11,7 @@
         v-for="item in videos"
         :key="item.url"
       >
-        <v-card color="purple">
+        <v-card color="primary" elevation="10">
           <v-card-title>
             <iframe
               width="560"
@@ -44,6 +44,7 @@ export default {
 <style scoped>
 .testimonies {
   position: relative;
+  box-shadow: 10px 10px 0px 0 #200038;
 }
 
 #testimonies-1::before {

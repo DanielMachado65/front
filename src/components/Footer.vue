@@ -1,9 +1,13 @@
 <template>
-  <v-row style="background: #313131" class="d-flex justify-center"> 
-     <p>
-       Home | Nos ajude | Contato | Loja
-     </p>
-  </v-row>
+  <footer class="pb-10 footer">
+    <v-row class="d-flex justify-center">
+      <p>Home | Nos ajude | Contato | Loja</p>
+    </v-row>
+    <v-row class="d-flex justify-center">
+      <v-icon class="mr-3" large color="white darken-2"> mdi-facebook </v-icon>
+      <v-icon class="ml-1" large color="white darken-2"> mdi-instagram </v-icon>
+    </v-row>
+  </footer>
 </template>
 
 <script>
@@ -11,3 +15,20 @@ export default {
   name: "FooterComponent",
 };
 </script>
+
+<style scoped>
+.footer {
+  background: #222222;
+  position: relative;
+}
+
+.footer::before {
+  content: "";
+  background: #222222;
+  width: 100vw;
+  position: absolute;
+  top: -250px;
+  bottom: 0;
+  z-index: -1;
+}
+</style>

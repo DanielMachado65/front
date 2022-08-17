@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main>
+    <v-main id="main">
       <v-container>
         <!-- main topics -->
         <Introduction />
@@ -47,7 +47,12 @@ export default {
 
 body {
   margin: 0;
+  background-color: #1e1e24;
+}
+
+#main {
   background: url("./assets/stars.png");
+  z-index: 0;
 }
 
 ::-webkit-scrollbar {
