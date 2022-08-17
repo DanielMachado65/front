@@ -51,7 +51,7 @@ export default {
       if (this.user.email && this.user.name)
         UserService.create(this.user)
           .then(() => {
-            showSuccess("deu boa");
+            showSuccess("Entraremos em contato com você");
           })
           .catch(showError);
     },

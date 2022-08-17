@@ -11,8 +11,8 @@
       <v-img
         lazy-src="../assets/logo-negativa.png"
         src="../assets/logo-negativa.png"
-        max-height="100"
-        max-width="100"
+        max-height="150"
+        max-width="150"
       ></v-img>
     </v-row>
   </footer>
