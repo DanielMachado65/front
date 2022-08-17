@@ -3,12 +3,12 @@
     <v-timeline-item
       v-for="(item, i) in items"
       :key="i"
-      color="purple darken-2"
+      color="primary"
       :icon="item.icon"
       transition="slide-x-transation"
       fill-dot
     >
-      <v-card color="purple darken-2" dark>
+      <v-card color="primary">
         <v-card-title class="text-h6">{{ item.title }}</v-card-title>
         <v-card-text>
           <p>

@@ -6,9 +6,20 @@ Vue.use(Vuetify);
 
 export default new Vuetify({
     theme: {
-        dark: {
-            primary: colors.purple,
-            background: colors.indigo.base,
-        }
+        dark: false,
+        themes: {
+            light: {
+                primary: colors.purple.accent1,
+                secondary: '#b0bec5',
+                accent: '#8c9eff',
+                error: '#b71c1c',
+            },
+            dark: {
+                secondary: '#b0bec5',
+                accent: '#8c9eff',
+                error: '#b71c1c',
+                primary: colors.red.accent1,
+            },
+        },
     }
 });
