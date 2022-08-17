@@ -7,6 +7,14 @@
       <v-icon class="mr-3" large color="white darken-2"> mdi-facebook </v-icon>
       <v-icon class="ml-1" large color="white darken-2"> mdi-instagram </v-icon>
     </v-row>
+    <v-row class="d-flex justify-center mt-5"> 
+      <v-img
+        lazy-src="../assets/logo-negativa.png"
+        src="../assets/logo-negativa.png"
+        max-height="100"
+        max-width="100"
+      ></v-img>
+    </v-row>
   </footer>
 </template>
 

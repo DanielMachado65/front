@@ -26,15 +26,19 @@ export default {
   data: () => ({
     items: [
       {
-        title: ". 2019",
+        title: ". 2019-2020",
         text: " Evento aconteceu e foi incrivel, realente uma experiencia com Deus",
       },
       {
-        title: ". 2020 ",
+        title: ". 2020-2021",
         text: " Evento realmente pegou fogo de tão esperitual que foi",
       },
       {
-        title: ". 2023 ",
+        title: ". 2021-2022 ",
+        text: " Evento foi cancelado devido a pandemia",
+      },
+      {
+        title: ". 2022-2023 ",
         text: " Esse vai ser o evento de encerramento",
       },
     ],
