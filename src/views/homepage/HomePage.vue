@@ -1,12 +1,12 @@
 <template>
-  <div class="HomePage">
+  <v-container class="HomePage">
     <Introduction />
     <History />
 
     <!-- footer  -->
     <Testimonies />
     <Subscribe />
-  </div>
+  </v-container>
 </template>
 
 <script>

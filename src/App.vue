@@ -2,9 +2,7 @@
   <v-app>
     <v-main id="main">
       <!-- <NavBar /> -->
-      <v-container>
-        <router-view />
-      </v-container>
+      <router-view />
       <Footer />
     </v-main>
   </v-app>
