@@ -1,14 +1,9 @@
 <template>
   <v-app>
     <v-main id="main">
+      <!-- <NavBar /> -->
       <v-container>
-        <!-- main topics -->
-        <Introduction />
-        <History />
-
-        <!-- footer  -->
-        <Testimonies />
-        <Subscribe />
+        <router-view />
       </v-container>
       <Footer />
     </v-main>
@@ -16,21 +11,13 @@
 </template>
 
 <script>
-import Introduction from "./components/Introduction";
-import History from "./components/History";
-import Subscribe from "./components/Subscribe";
-import Testimonies from "./components/Testimonies";
-import Footer from "./components/Footer.vue";
-
+import { Footer } from "./components/index";
 export default {
   name: "App",
 
   components: {
-    Introduction,
-    History,
-    Subscribe,
-    Testimonies,
     Footer,
+    // NavBar,
   },
 };
 </script>
