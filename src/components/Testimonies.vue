@@ -9,11 +9,30 @@
         md="4"
         sm="6"
         v-for="item in videos"
-        :key="item.url"
+        :key="item.title"
       >
         <v-card color="primary" elevation="10">
-          <v-card-title> {{ item.title }} </v-card-title>
-          <v-card-text>{{ item.description }}</v-card-text>
+          <v-list-item>
+            <v-list-item-content>
+              <v-row>
+                <v-col cols="4">
+                  <v-list-item-avatar size="80" color="white">
+                    <v-img :src="require(`../assets/${item.url}`)" />
+                  </v-list-item-avatar>
+                </v-col>
+                <v-col>
+                  <div class="text-overline mb-4">{{ item.overline }}</div>
+
+                  <v-list-item-title class="text-h5 mb-5">
+                    {{ item.title }}
+                  </v-list-item-title>
+                  <v-list-item-subtitle class="">{{
+                    item.description
+                  }}</v-list-item-subtitle>
+                </v-col>
+              </v-row>
+            </v-list-item-content>
+          </v-list-item>
         </v-card>
       </v-col>
     </v-row>
@@ -28,19 +47,20 @@ export default {
     videos: [
       {
         id: 1,
-        url: "asdaksjd",
+        url: "person1.jpeg",
+        overline: "test",
         title: "Guilherme, 23",
         description: "achei muito legal",
       },
       {
         id: 2,
-        url: "akjsd",
+        url: "person1.jpeg",
         title: "Daniel, 23",
         description: "achei muito legal",
       },
       {
         id: 3,
-        url: "asd",
+        url: "person1.jpeg",
         title: "Gabriele, 23",
         description: "achei muito legal",
       },
