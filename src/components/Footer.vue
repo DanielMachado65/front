@@ -9,8 +9,8 @@
     </v-row>
     <v-row class="d-flex justify-center mt-5">
       <v-img
-        lazy-src="../assets/logo-negativa.png"
-        src="../assets/logo-negativa.png"
+        lazy-src="@/assets/logo-negativa.png"
+        src="@/assets/logo-negativa.png"
         max-height="150"
         max-width="150"
       ></v-img>

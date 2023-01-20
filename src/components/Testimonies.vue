@@ -17,7 +17,7 @@
               <v-row>
                 <v-col cols="4">
                   <v-list-item-avatar size="80" color="white">
-                    <v-img :src="require(`../assets/${item.url}`)" />
+                    <v-img :src="require(`@/assets/${item.url}`)" />
                   </v-list-item-avatar>
                 </v-col>
                 <v-col>
@@ -48,7 +48,6 @@ export default {
       {
         id: 1,
         url: "person1.jpeg",
-        overline: "test",
         title: "Guilherme, 23",
         description: "achei muito legal",
       },

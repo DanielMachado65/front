@@ -1,15 +1,12 @@
 <template>
   <v-container fluid id="title-introduction">
     <v-img
-      lazy-src="../../src/assets/background.png"
-      src="../../src/assets/background.png"
+      lazy-src="@/assets/background.png"
+      src="@/assets/background.png"
       class="d-flex justify-center align-center custom-img"
     >
       <v-container class="flex-column justify-center align-center">
-        <v-img
-          lazy-src="../../src/assets/logo.png"
-          src="../../src/assets/logo.png"
-        ></v-img>
+        <v-img lazy-src="@/assets/logo.png" src="@/assets/logo.png"></v-img>
         <p
           class="text-center"
           style="z-index: 20001; padding: 20px; font-size: 25px"
