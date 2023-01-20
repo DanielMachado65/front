@@ -30,14 +30,19 @@ export default {
   font-family: "Montserrat", sans-serif;
 }
 
-body {
-  margin: 0;
-  background-color: #1e1e24;
+@font-face {
+  font-family: "LeagueGothic";
+  src: url("./assets/LeagueGothic-Regular.ttf") format("truetype");
 }
 
-#main {
-  background: url("./assets/stars.png");
-  z-index: 0;
+.league-gothic {
+  font-family: "LeagueGothic", Arial, Helvetica, sans-serif !important;
+}
+
+main {
+  margin: 0;
+  background-color: #020202;
+  padding: 0;
 }
 
 ::-webkit-scrollbar {

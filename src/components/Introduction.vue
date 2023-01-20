@@ -1,13 +1,24 @@
 <template>
-  <div id="title-introduction" class="d-flex justify-center align-center">
-    <div class="d-flex justify-center align-center flex-column">
-      <p class="text-h1" style="text-transform: uppercase">Børn</p>
-      <p class="text-h5">
-        "Ore Menos para encontrar a pessoa certa e mais para que voce seja a
-        pessoa certa."
-      </p>
-    </div>
-  </div>
+  <v-container fluid id="title-introduction">
+    <v-img
+      lazy-src="../../src/assets/background.png"
+      src="../../src/assets/background.png"
+      class="d-flex justify-center align-center custom-img"
+    >
+      <v-container class="flex-column justify-center align-center">
+        <v-img
+          lazy-src="../../src/assets/logo.png"
+          src="../../src/assets/logo.png"
+        ></v-img>
+        <p
+          class="text-center"
+          style="z-index: 20001; padding: 20px; font-size: 25px"
+        >
+          Não somos um retiro convencional, somos uma experiência pessoal!
+        </p>
+      </v-container>
+    </v-img>
+  </v-container>
 </template>
 
 <script>
@@ -21,5 +32,14 @@ export default {
 <style>
 #title-introduction {
   height: 90vh;
+  z-index: 0;
+  padding: 0;
+}
+
+.custom-img {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
 }
 </style>

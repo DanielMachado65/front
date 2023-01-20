@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4 class="mb-10 mt-10 text-h4">Depoimentos</h4>
+    <h4 class="mb-10 mt-10 league-gothic text-h3">Depoimentos</h4>
     <v-row>
       <v-col
         class="testimonies"
@@ -12,15 +12,8 @@
         :key="item.url"
       >
         <v-card color="primary" elevation="10">
-          <v-card-title>
-            <!-- <iframe
-              width="560"
-              height="315"
-              :src="item.url"
-              frameborder="0"
-              allowfullscreen
-            ></iframe> -->
-          </v-card-title>
+          <v-card-title> {{ item.title }} </v-card-title>
+          <v-card-text>{{ item.description }}</v-card-text>
         </v-card>
       </v-col>
     </v-row>
@@ -33,9 +26,24 @@ export default {
 
   data: () => ({
     videos: [
-      { id: 1, url: "asdaksjd" },
-      { id: 2, url: "akjsd" },
-      { id: 3, url: "asd" },
+      {
+        id: 1,
+        url: "asdaksjd",
+        title: "Guilherme, 23",
+        description: "achei muito legal",
+      },
+      {
+        id: 2,
+        url: "akjsd",
+        title: "Daniel, 23",
+        description: "achei muito legal",
+      },
+      {
+        id: 3,
+        url: "asd",
+        title: "Gabriele, 23",
+        description: "achei muito legal",
+      },
     ],
   }),
 };
@@ -45,16 +53,6 @@ export default {
 .testimonies {
   position: relative;
   box-shadow: 10px 10px 0px 0 #200038;
-}
-
-#testimonies-1::before {
-  content: '"';
-  position: absolute;
-  font-size: 10em;
-  z-index: 10;
-  top: -65px;
-  left: -45px;
-  font-family: cursive;
 }
 
 @media only screen and (max-width: 600px) {

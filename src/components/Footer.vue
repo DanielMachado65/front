@@ -1,13 +1,13 @@
 <template>
   <footer class="pb-10 footer">
-    <v-row class="d-flex justify-center">
+    <v-row class="d-flex justify-center pt-10">
       <p>Home | Nos ajude | Contato | Loja</p>
     </v-row>
     <v-row class="d-flex justify-center">
       <v-icon class="mr-3" large color="white darken-2"> mdi-facebook </v-icon>
       <v-icon class="ml-1" large color="white darken-2"> mdi-instagram </v-icon>
     </v-row>
-    <v-row class="d-flex justify-center mt-5"> 
+    <v-row class="d-flex justify-center mt-5">
       <v-img
         lazy-src="../assets/logo-negativa.png"
         src="../assets/logo-negativa.png"
@@ -26,13 +26,13 @@ export default {
 
 <style scoped>
 .footer {
-  background: #222222;
+  background: #0d0d0d;
   position: relative;
 }
 
 .footer::before {
   content: "";
-  background: #222222;
+  background: #0d0d0d;
   width: 100vw;
   position: absolute;
   top: -250px;
