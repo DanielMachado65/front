@@ -1,6 +1,7 @@
 <template>
   <v-container fluid id="title-introduction">
     <v-img
+      center
       lazy-src="@/assets/background.png"
       src="@/assets/background.png"
       class="d-flex justify-center align-center custom-img"
