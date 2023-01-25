@@ -7,6 +7,10 @@
       <!-- footer  -->
       <Testimonies />
     </v-container>
+
+    <v-container fluid class="purple darken-4 mt-12">
+      <p class="text-h1">born</p>
+    </v-container>
   </div>
 </template>
 
@@ -20,3 +24,6 @@ export default {
   },
 };
 </script>
+
+<style scoped>
+</style>

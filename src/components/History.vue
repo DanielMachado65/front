@@ -8,11 +8,11 @@
       fill-dot
     >
       <v-card color="primary" class="history" elevation="10">
-        <v-card-title class="text-h6">{{ item.title }}</v-card-title>
         <v-card-text>
-          <p>
-            {{ item.text }}
-          </p>
+          <div>{{ item.data }}</div>
+          <p class="text-h4 text--primary">{{ item.title }}</p>
+          <p>{{ item.subtitle }}</p>
+          <div class="text--primary">{{ item.text }}</div>
         </v-card-text>
       </v-card>
     </v-timeline-item>
@@ -26,20 +26,22 @@ export default {
   data: () => ({
     items: [
       {
-        title: ". 2019-2020",
-        text: " Evento aconteceu e foi incrivel, realente uma experiencia com Deus",
+        title: "BORN 1",
+        data: "(2019)",
+        subtitle: "Preparado para nascer de novo? ",
+        text: " Primeira edição do evento com mais de 70 participantes, o evento foi cheio de entrega, novas experiências com Jesus, aprendizados pessoais,  esportes radicais e o mais importe experienciar o derramamento do Espírito Santo. ",
       },
       {
-        title: ". 2020-2021",
-        text: " Evento realmente pegou fogo de tão esperitual que foi",
+        title: "BORN 2",
+        data: "(2020)",
+        subtitle: "Maturidade espiritual. ",
+        text: "Na segunda edição Deus nos mostrou a dependência total dEle, depois de um acidente na cozinha ter queimado todas as comidas e utensílios do evento, vimos o agir de Deus em uma experiência imersiva de dependência e intimidade única e só quem estava lá pode descrever a atmosfera que foi criada de união e entrega a Deus. O fogo queimou e tudo se fez novo!",
       },
       {
-        title: ". 2021-2022 ",
-        text: " Evento foi cancelado devido a pandemia",
-      },
-      {
-        title: ". 2022-2023 ",
-        text: " Esse vai ser o evento de encerramento",
+        title: "Born 3",
+        data: "(2022)",
+        subtitle: " Não reveleramos o titulo ainda",
+        text: " Muito será revelado em breve ",
       },
     ],
   }),
