@@ -8,16 +8,32 @@
       <Testimonies />
     </v-container>
 
-    <About />
+    <v-container fluid class="purple darken-4 mt-12">
+      <About />
+    </v-container>
 
-    <v-container>
-      <Price />
+    <v-container fluid>
+      <v-row>
+        <v-col cols="12" sm="6">
+          <Price />
+        </v-col>
+        <v-col cols="12" sm="6" class="p-5">
+          <subscribe />
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
 
 <script>
-import { Introduction, History, Testimonies, Price, About } from "@/components";
+import {
+  Introduction,
+  History,
+  Testimonies,
+  Price,
+  About,
+  Subscribe,
+} from "@/components";
 export default {
   components: {
     Introduction,
@@ -25,6 +41,7 @@ export default {
     Testimonies,
     About,
     Price,
+    Subscribe,
   },
 };
 </script>

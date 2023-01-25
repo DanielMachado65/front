@@ -1,5 +1,5 @@
 <template>
-  <v-container fluid class="purple darken-4 mt-12">
+  <v-row>
     <v-row class="d-flex justify-center pt-10">
       <v-text class="text-h2"> Born </v-text>
     </v-row>
@@ -15,7 +15,7 @@
     <v-row>
       Sitio Sossego Mandirituba - PR, 83800-000 Data: 28/04 a 01/05 de 2023
     </v-row>
-  </v-container>
+  </v-row>
 </template>
 
 <script>
