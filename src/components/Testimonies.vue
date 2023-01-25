@@ -11,24 +11,29 @@
         v-for="item in videos"
         :key="item.title"
       >
-        <v-card color="primary" elevation="10">
+        <v-card
+          color="primary"
+          elevation="10"
+          max-height="500"
+          min-height="300"
+        >
           <v-list-item>
             <v-list-item-content>
               <v-row>
-                <v-col cols="4">
-                  <v-list-item-avatar size="80" color="white">
+                <v-col cols="3" class="d-flex justify-center align-center">
+                  <v-list-item-avatar size="80" color="white" class="mx-auto">
                     <v-img :src="require(`@/assets/${item.url}`)" />
                   </v-list-item-avatar>
                 </v-col>
-                <v-col>
-                  <div class="text-overline mb-4">{{ item.overline }}</div>
+                <v-col cols="9">
+                  <div class="text-overline mb-4 pl-3">{{ item.overline }}</div>
 
-                  <v-list-item-title class="text-h5 mb-5">
+                  <v-list-item-title class="text-h5 mb-2 pl-3">
                     {{ item.title }}
                   </v-list-item-title>
-                  <v-list-item-subtitle class="">{{
-                    item.description
-                  }}</v-list-item-subtitle>
+                  <v-card-text class="p-0 m-0">
+                    {{ item.description }}
+                  </v-card-text>
                 </v-col>
               </v-row>
             </v-list-item-content>
@@ -48,20 +53,42 @@ export default {
       {
         id: 1,
         url: "person1.jpeg",
-        title: "Guilherme, 23",
-        description: "achei muito legal",
+        overline: "Born I",
+        title: "Alana Beatriz",
+        description:
+          "Foi o melhor, a melhor experiência que tive pessoal e com Deus estava presente! Foi incrível 😍",
       },
       {
         id: 2,
-        url: "person1.jpeg",
-        title: "Daniel, 23",
-        description: "achei muito legal",
+        url: "person2.jpeg",
+        overline: "Born II",
+        title: "Thiago Pereira",
+        description:
+          "Uma das melhores experiências da minha vida, uma das mais marcantes e talvez a mais emocionante e espiritual que eu já tive.",
       },
       {
         id: 3,
-        url: "person1.jpeg",
-        title: "Gabriele, 23",
-        description: "achei muito legal",
+        url: "person3.jpeg",
+        overline: "Born II",
+        title: "Mariana Martins",
+        description:
+          "A experiência mais transformadora e inesquecível. Não consigo descrever a felicidade de ter participado desses momentos mais perto de Deus e de pessoas incríveis! Saudades 💜",
+      },
+      {
+        id: 4,
+        url: "person4.jpeg",
+        overline: "Born II",
+        title: "Mayssuellem M Mendes",
+        description:
+          "Uma experiência incrível! Nunca tive isso em nenhum retiro, foi inexplicável, sério. 💜",
+      },
+      {
+        id: 5,
+        url: "person5.jpeg",
+        overline: "Born II",
+        title: "Ana Paula Barbosa",
+        description:
+          "Um acampamento surpreendente, melhor do que eu esperava. 💜",
       },
     ],
   }),
