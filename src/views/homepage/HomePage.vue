@@ -8,19 +8,20 @@
       <Testimonies />
     </v-container>
 
-    <v-container fluid class="purple darken-4 mt-12">
-      <p class="text-h1">born</p>
-    </v-container>
+    <Calltoaction />
+
+    <v-container> </v-container>
   </div>
 </template>
 
 <script>
-import { Introduction, History, Testimonies } from "@/components";
+import { Introduction, History, Testimonies, Calltoaction } from "@/components";
 export default {
   components: {
     Introduction,
     History,
     Testimonies,
+    Calltoaction,
   },
 };
 </script>
