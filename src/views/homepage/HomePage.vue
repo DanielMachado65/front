@@ -8,20 +8,23 @@
       <Testimonies />
     </v-container>
 
-    <Calltoaction />
+    <About />
 
-    <v-container> </v-container>
+    <v-container>
+      <Price />
+    </v-container>
   </div>
 </template>
 
 <script>
-import { Introduction, History, Testimonies, Calltoaction } from "@/components";
+import { Introduction, History, Testimonies, Price, About } from "@/components";
 export default {
   components: {
     Introduction,
     History,
     Testimonies,
-    Calltoaction,
+    About,
+    Price,
   },
 };
 </script>

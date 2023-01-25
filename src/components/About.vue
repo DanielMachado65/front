@@ -20,7 +20,7 @@
 
 <script>
 export default {
-  name: "Call-to-action",
+  name: "FutureComponent",
 };
 </script>
 

@@ -3,8 +3,9 @@ import History from "./History";
 import Introduction from "./Introduction";
 import NavBar from "./NavBar";
 import Testimonies from "./Testimonies";
-import Calltoaction from "./Calltoaction.vue";
+import About from "./About.vue";
 import Subscribe from "./Subscribe.vue";
+import Price from "./Price.vue";
 
 export {
   Footer,
@@ -12,6 +13,7 @@ export {
   Introduction,
   NavBar,
   Testimonies,
-  Calltoaction,
+  About,
   Subscribe,
+  Price,
 };
