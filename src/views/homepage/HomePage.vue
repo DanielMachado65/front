@@ -12,7 +12,7 @@
       <About />
     </v-container>
 
-    <v-container fluid>
+    <v-container fluid class="background-subfoter">
       <v-row>
         <v-col cols="12" sm="6">
           <Price />
@@ -47,4 +47,8 @@ export default {
 </script>
 
 <style scoped>
+.background-subfoter {
+  /* color: #1a150b; */
+  background-color: #1a150b;
+}
 </style>

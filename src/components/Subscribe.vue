@@ -3,11 +3,11 @@
     <v-col cols="12" md="10">
       <v-card class="mx-auto my-12 primary subscribe" elevation="10">
         <v-card-title class="justify-center white--text"
-          >Se inscreva já!</v-card-title
+          >Quer viver essa experiência?</v-card-title
         >
 
         <v-card-text class="text-center white--text">
-          Inscreva-se para fazer parte desse evento mais do que maravilhoso.
+          Precisamos fazer seu cadastro
         </v-card-text>
 
         <v-card-text>
