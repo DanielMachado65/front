@@ -3,6 +3,7 @@ import Router from "vue-router";
 
 import App from "./App.vue";
 import vuetify from "./plugins/vuetify";
+import * as VueGoogleMaps from "vue2-google-maps";
 
 // plugins
 import "./plugins/axios";
@@ -14,6 +15,12 @@ import "./assets/LeagueGothic-Regular.ttf";
 
 Vue.config.devtools = true;
 Vue.use(Router);
+
+Vue.use(VueGoogleMaps, {
+  load: {
+    libraries: "places", // This is required if you use the Auto complete plug-in
+  },
+});
 
 new Vue({
   vuetify,
