@@ -18,6 +18,7 @@ Vue.use(Router);
 
 Vue.use(VueGoogleMaps, {
   load: {
+    key: process.env.VUE_API_KEY_GOOGLE,
     libraries: "places", // This is required if you use the Auto complete plug-in
   },
 });
