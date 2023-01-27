@@ -6,11 +6,17 @@
           >Quer viver essa experiência?</v-card-title
         >
 
-        <v-card-text class="text-center white--text">
-          Precisamos fazer seu cadastro
-        </v-card-text>
+        <v-card-subtitle class="text-center white--text">
+          se cadastre agora no nosso site
+        </v-card-subtitle>
 
-        <v-card-text>
+        <div class="d-flex justify-center my-10 flex-column" v-if="done">
+          <v-icon size="72" color="green darken-2"> mdi-check-circle </v-icon>
+          <v-card-subtitle class="text-center white--text">
+            vamos redirecionar você para o checkout do Pagar.me
+          </v-card-subtitle>
+        </div>
+        <v-card-text v-else-if="!loading" class="mt-5">
           <v-text-field
             color="white"
             label="Name"
@@ -28,9 +34,22 @@
             required
           />
         </v-card-text>
+        <div v-else class="d-flex justify-center my-10">
+          <v-progress-circular
+            color="purple darken-1"
+            :indeterminate="true"
+            size="64"
+          ></v-progress-circular>
+        </div>
 
         <v-card-actions class="justify-center pb-5">
-          <v-btn color="white" class="black--text" @click="submit" width="200">
+          <v-btn
+            color="white"
+            class="black--text"
+            @click="submit"
+            width="200"
+            :disabled="done"
+          >
             Enviar!
           </v-btn>
         </v-card-actions>
@@ -40,24 +59,29 @@
 </template>
 
 <script>
-import { UserService } from "@/services";
-import { showError, showSuccess } from "@/global";
+import { OrderService } from "@/services";
+import { showError } from "@/global";
 export default {
   name: "SubscribeComponent",
   methods: {
     submit() {
-      if (this.user.email == undefined) showError("O e-mail está vazio");
-      if (this.user.name == undefined) showError("O nome está vazio");
+      // if (this.user.email == undefined) showError("O e-mail está vazio");
+      // if (this.user.name == undefined) showError("O nome está vazio");
+      this.loading = true;
+
       if (this.user.email && this.user.name)
-        UserService.create(this.user)
+        OrderService.create({ ...this.user })
           .then(() => {
-            showSuccess("Entraremos em contato com você");
+            this.loading = false;
+            this.done = true;
           })
           .catch(showError);
     },
   },
   data: () => ({
     user: {},
+    loading: false,
+    done: false,
     rules: {
       required: (value) => !!value || "Requerido.",
       email: (value) => {
