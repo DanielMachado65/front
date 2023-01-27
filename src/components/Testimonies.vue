@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h4 class="mb-10 mt-10 league-gothic text-h3">Depoimentos</h4>
+    <div class="mb-10 mt-10 text-h3 title-born">Depoimentos</div>
     <v-row>
       <v-col
         class="testimonies"
@@ -28,10 +28,10 @@
                 <v-col cols="9">
                   <div class="text-overline mb-4 pl-3">{{ item.overline }}</div>
 
-                  <v-list-item-title class="text-h5 mb-2 pl-3">
+                  <v-list-item-title class="text-h4 mb-2 pl-3 title-born">
                     {{ item.title }}
                   </v-list-item-title>
-                  <v-card-text class="p-0 m-0">
+                  <v-card-text class="p-0 m-0 subtitle-2">
                     {{ item.description }}
                   </v-card-text>
                 </v-col>
@@ -99,6 +99,10 @@ export default {
 .testimonies {
   position: relative;
   box-shadow: 10px 10px 0px 0 #200038;
+}
+
+.title-born {
+  font-family: "LeagueGothic" !important;
 }
 
 @media only screen and (max-width: 600px) {

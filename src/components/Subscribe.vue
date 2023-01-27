@@ -2,7 +2,7 @@
   <v-row justify="center">
     <v-col cols="12" md="10">
       <v-card class="mx-auto my-12 primary subscribe" elevation="10">
-        <v-card-title class="justify-center white--text"
+        <v-card-title class="justify-center white--text text-h3 title-born"
           >Quer viver essa experiência?</v-card-title
         >
 
@@ -18,6 +18,8 @@
         </div>
         <v-card-text v-else-if="!loading" class="mt-5">
           <v-text-field
+            style="width: 80%"
+            class="mx-auto"
             color="white"
             label="Name"
             outlined
@@ -26,6 +28,8 @@
             required
           />
           <v-text-field
+            style="width: 80%"
+            class="mx-auto"
             color="white"
             label="E-mail"
             outlined
@@ -97,5 +101,9 @@ export default {
 <style scoped>
 .subscribe {
   box-shadow: 10px 16px 0px 0 #200038 !important;
+}
+
+.title-born {
+  font-family: "LeagueGothic" !important;
 }
 </style>
