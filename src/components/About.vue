@@ -38,7 +38,7 @@
               >
 
               <v-card-text>
-                <!-- <GmapMap
+                <GmapMap
                   :center="{
                     lat: -25.76807503273651,
                     lng: -49.369830988533316,
@@ -59,7 +59,7 @@
                     :clickable="true"
                     @click="center = m.position"
                   />
-                </GmapMap> -->
+                </GmapMap>
               </v-card-text>
             </v-card>
           </v-col>
