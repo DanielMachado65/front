@@ -36,7 +36,7 @@
         </v-card-text>
         <div v-else class="d-flex justify-center my-10">
           <v-progress-circular
-            color="purple darken-1"
+            color="purple darken-2"
             :indeterminate="true"
             size="64"
           ></v-progress-circular>

@@ -8,7 +8,7 @@
       <Testimonies />
     </v-container>
 
-    <v-container fluid class="purple darken-4 mt-12">
+    <v-container fluid class="theme--dark mt-12">
       <About />
     </v-container>
 
