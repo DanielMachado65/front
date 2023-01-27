@@ -66,17 +66,24 @@ export default {
   name: "SubscribeComponent",
   methods: {
     submit() {
-      // if (this.user.email == undefined) showError("O e-mail está vazio");
-      // if (this.user.name == undefined) showError("O nome está vazio");
+      if (this.user.email == undefined) showError("O e-mail está vazio");
+      if (this.user.name == undefined) showError("O nome está vazio");
       this.loading = true;
 
       if (this.user.email && this.user.name)
         OrderService.create({ ...this.user })
-          .then(() => {
+          .then((data) => {
             this.loading = false;
             this.done = true;
+
+            const { checkouts } = data?.data;
+
+            window.location.href = checkouts[0].payment_url;
           })
-          .catch(showError);
+          .catch((error) => {
+            console.log(error);
+            showError(error);
+          });
     },
   },
   data: () => ({
