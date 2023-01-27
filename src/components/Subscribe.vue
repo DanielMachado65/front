@@ -2,7 +2,8 @@
   <v-row justify="center">
     <v-col cols="12" md="10">
       <v-card class="mx-auto my-12 primary subscribe" elevation="10">
-        <v-card-title class="justify-center white--text text-h3 title-born"
+        <v-card-title
+          class="justify-center white--text text-h3 title-born text-no-wrap"
           >Quer viver essa experiência?</v-card-title
         >
 
@@ -18,8 +19,6 @@
         </div>
         <v-card-text v-else-if="!loading" class="mt-5">
           <v-text-field
-            style="width: 80%"
-            class="mx-auto"
             color="white"
             label="Name"
             outlined
@@ -28,8 +27,6 @@
             required
           />
           <v-text-field
-            style="width: 80%"
-            class="mx-auto"
             color="white"
             label="E-mail"
             outlined

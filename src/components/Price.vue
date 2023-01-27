@@ -1,12 +1,12 @@
 <template>
-  <v-row class="mx-auto d-flex justify-center align-center">
-    <v-col cols="12" md="10">
+  <v-row class="mx-auto d-flex justify-center">
+    <v-col cols="12" md="10" class="align-center">
       <v-img
+        class="mt-12"
         max-height="400"
         max-width="100wh"
         lazy-src="@/assets/about.jpeg"
         src="@/assets/about.jpeg"
-        class="d-flex justify-center align-center custom-img"
       />
     </v-col>
   </v-row>
