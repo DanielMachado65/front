@@ -3,6 +3,7 @@
     <v-col cols="12" md="10">
       <v-img
         max-height="400"
+        max-width="100wh"
         lazy-src="@/assets/about.jpeg"
         src="@/assets/about.jpeg"
         class="d-flex justify-center align-center custom-img"

@@ -37,12 +37,6 @@ export default {
         subtitle: "Maturidade espiritual. ",
         text: "Na segunda edição Deus nos mostrou a dependência total dEle, depois de um acidente na cozinha ter queimado todas as comidas e utensílios do evento, vimos o agir de Deus em uma experiência imersiva de dependência e intimidade única e só quem estava lá pode descrever a atmosfera que foi criada de união e entrega a Deus. O fogo queimou e tudo se fez novo!",
       },
-      {
-        title: "Born 3",
-        data: "(2022)",
-        subtitle: " Não reveleramos o titulo ainda",
-        text: " Muito será revelado em breve ",
-      },
     ],
   }),
 };
