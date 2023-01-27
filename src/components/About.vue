@@ -23,10 +23,10 @@
           <v-col class="d-flex justify-center flex-column">
             <v-card
               rounded
-              class="mx-auto my-12 primary subscribe box"
+              class="mx-auto primary subscribe box"
               elevation="10"
-              width="600"
-              height="400"
+              width="100%"
+              max-height="500"
             >
               <v-card-title class="white--text text-h4 title-born">
                 <v-icon color="purple darken-2" size="36" class="mr-2"
@@ -47,7 +47,7 @@
                   map-type-id="terrain"
                   style="
                     width: 100%;
-                    height: 250px;
+                    max-height: 500px;
                     border-radius: 50%;
                     margin: 0 auto;
                   "
