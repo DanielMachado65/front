@@ -1,11 +1,10 @@
 <template>
   <v-container fluid id="title-introduction">
-    <v-img
-      lazy-src="@/assets/background.png"
-      src="@/assets/background.png"
-      class="d-flex justify-center align-center"
-    >
-      <v-container class="d-flex flex-column justify-center align-center">
+    <v-img lazy-src="@/assets/background.png" src="@/assets/background.png">
+      <v-container
+        id="subtitle-introduction"
+        class="d-flex flex-column justify-center align-center"
+      >
         <v-img
           class="logo-born"
           max-height="600"
@@ -34,7 +33,12 @@ export default {
 
 <style scoped>
 #title-introduction {
-  height: 90vh;
+  min-height: 90vh;
+  z-index: 0;
+  padding: 0;
+}
+#subtitle-introduction {
+  min-height: 90vh;
   z-index: 0;
   padding: 0;
 }
@@ -43,13 +47,15 @@ export default {
   font-family: "LeagueGothic" !important;
 }
 
-.logo-born {
-  margin-top: -400px;
-}
-
 @media screen and (max-width: 768px) {
   .logo-born {
     margin-top: 0px;
+    max-height: 400px !important;
+    max-width: 400px !important;
+  }
+
+  .title-born {
+    font-size: 20px !important;
   }
 }
 </style>
