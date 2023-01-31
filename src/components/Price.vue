@@ -3,10 +3,11 @@
     <v-col cols="12" md="10" class="align-center">
       <v-img
         class="mt-12"
-        max-height="400"
+        min-height="230"
+        max-height="500"
         max-width="100wh"
-        lazy-src="@/assets/about.jpeg"
-        src="@/assets/about.jpeg"
+        lazy-src="@/assets/about.png"
+        src="@/assets/about.png"
       />
     </v-col>
   </v-row>
