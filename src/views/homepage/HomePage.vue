@@ -49,7 +49,7 @@ export default {
 <style>
 .background-subfoter {
   /* color: #1a150b; */
-  background-color: #1a150b;
+  /* background-color: #1a150b; */
 }
 
 .title-born {

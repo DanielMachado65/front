@@ -20,12 +20,16 @@
           <v-list-item>
             <v-list-item-content>
               <v-row>
-                <v-col cols="3" class="d-flex justify-center align-center">
-                  <v-list-item-avatar size="80" color="white" class="mx-auto">
+                <v-col cols="4" class="d-flex">
+                  <v-list-item-avatar
+                    size="80"
+                    color="white"
+                    class="mx-auto align-start"
+                  >
                     <v-img :src="require(`@/assets/${item.url}`)" />
                   </v-list-item-avatar>
                 </v-col>
-                <v-col cols="9">
+                <v-col cols="8">
                   <div class="text-overline mb-4 pl-3">{{ item.overline }}</div>
 
                   <v-list-item-title class="text-h4 mb-2 pl-3 title-born">
