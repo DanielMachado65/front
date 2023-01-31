@@ -1,5 +1,5 @@
 <template>
-  <v-container>
+  <v-container id="about">
     <v-row>
       <v-col class="d-flex flex-column justify-center" cols="12" sm="6">
         <div class="text-h2 title-born">BORN 3</div>
@@ -38,28 +38,13 @@
               >
 
               <v-card-text>
-                <GmapMap
-                  :center="{
-                    lat: -25.76807503273651,
-                    lng: -49.369830988533316,
-                  }"
-                  :zoom="17"
-                  map-type-id="terrain"
-                  style="
-                    width: 100%;
-                    max-height: 500px;
-                    border-radius: 50%;
-                    margin: 0 auto;
-                  "
+                <gmap-map
+                  :center="center"
+                  :zoom="12"
+                  style="max-width: 500px; height: 300px; margin: 0 auto"
                 >
-                  <GmapMarker
-                    :key="index"
-                    v-for="(m, index) in markers"
-                    :position="m.position"
-                    :clickable="true"
-                    @click="center = m.position"
-                  />
-                </GmapMap>
+                  <gmap-marker :position="center"></gmap-marker>
+                </gmap-map>
               </v-card-text>
             </v-card>
           </v-col>
@@ -72,18 +57,9 @@
 <script>
 export default {
   name: "FutureComponent",
-  data() {
-    return {
-      markers: [
-        {
-          position: {
-            lat: -25.76807503273651,
-            lng: -49.369830988533316,
-          },
-        },
-      ],
-    };
-  },
+  data: () => ({
+    center: { lat: -25.76807503273651, lng: -49.369830988533316 },
+  }),
 };
 </script>
 
