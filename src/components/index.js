@@ -6,6 +6,7 @@ import Testimonies from "./Testimonies";
 import About from "./About.vue";
 import Subscribe from "./Subscribe.vue";
 import Price from "./Price.vue";
+import Congratulations from "./Congratulations.vue";
 
 export {
   Footer,
@@ -16,4 +17,5 @@ export {
   About,
   Subscribe,
   Price,
+  Congratulations,
 };

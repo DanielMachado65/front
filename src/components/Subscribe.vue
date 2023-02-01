@@ -8,7 +8,7 @@
         >
 
         <v-card-subtitle class="text-center white--text">
-          para faça sua inscrição
+          Faça sua inscrição
         </v-card-subtitle>
 
         <div class="d-flex justify-center my-10 flex-column" v-if="done">
