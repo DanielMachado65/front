@@ -102,7 +102,7 @@ export default {
 <style scoped>
 .testimonies {
   position: relative;
-  box-shadow: 10px 10px 0px 0 #200038;
+  box-shadow: 10px 10px 0px 0 #1b0766;
 }
 
 .title-born {

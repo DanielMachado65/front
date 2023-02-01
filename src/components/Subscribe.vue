@@ -8,7 +8,7 @@
         >
 
         <v-card-subtitle class="text-center white--text">
-          se cadastre agora no nosso site
+          para faça sua inscrição
         </v-card-subtitle>
 
         <div class="d-flex justify-center my-10 flex-column" v-if="done">
@@ -37,7 +37,7 @@
         </v-card-text>
         <div v-else class="d-flex justify-center my-10">
           <v-progress-circular
-            color="purple darken-2"
+            color="blue darken-4"
             :indeterminate="true"
             size="64"
           ></v-progress-circular>
@@ -104,7 +104,7 @@ export default {
 
 <style scoped>
 .subscribe {
-  box-shadow: 10px 16px 0px 0 #200038 !important;
+  box-shadow: 10px 16px 0px 0 #1b0766 !important;
 }
 
 .title-born {

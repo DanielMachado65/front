@@ -54,6 +54,6 @@ main {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: purple;
+  background: #1b0766;
 }
 </style>

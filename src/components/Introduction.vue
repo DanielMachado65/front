@@ -12,12 +12,12 @@
           lazy-src="@/assets/logo.png"
           src="@/assets/logo.png"
         ></v-img>
-        <div
+        <!-- <div
           class="text-center text-h4 title-born"
           style="margin-top: -100px; font-size: 25px"
         >
           Não somos um retiro convencional, somos uma experiência pessoal!
-        </div>
+        </div> -->
       </v-container>
     </v-img>
   </v-container>
@@ -50,7 +50,8 @@ export default {
   }
 
   .title-born {
-    font-size: 16px !important;
+    font-size: 20px !important;
+    color: #a6a6a6;
   }
 }
 </style>

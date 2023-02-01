@@ -11,10 +11,10 @@
           o primeiro passo da sua história com Jesus.
         </div>
         <div class="text-6 mt-10">
-          <v-icon color="purple darken-2" size="36" class="mr-2"
+          <v-icon color="blue darken-4" size="36" class="mr-2"
             >mdi-calendar</v-icon
           >
-          28 de Abril 01 de Maio
+          28 de Abril a 01 de Maio
         </div>
       </v-col>
 
@@ -29,7 +29,7 @@
               max-height="500"
             >
               <v-card-title class="white--text text-h4 title-born">
-                <v-icon color="purple darken-2" size="36" class="mr-2"
+                <v-icon color="blue darken-4" size="36" class="mr-2"
                   >mdi-map-marker-radius</v-icon
                 >Como chegar?
               </v-card-title>
@@ -69,6 +69,6 @@ export default {
 }
 
 .box {
-  box-shadow: 10px 16px 0px 0 #200038 !important;
+  box-shadow: 10px 16px 0px 0 #1b0766 !important;
 }
 </style>

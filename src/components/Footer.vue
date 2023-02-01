@@ -4,8 +4,21 @@
       <p>Home | Nos ajude | Contato | Loja</p>
     </v-row>
     <v-row class="d-flex justify-center">
-      <v-icon class="mr-3" large color="white darken-2"> mdi-facebook </v-icon>
-      <v-icon class="ml-1" large color="white darken-2"> mdi-instagram </v-icon>
+      <v-icon
+        v-for="(item, i) in items"
+        :key="i"
+        class="mr-3"
+        large
+        color="white darken-2"
+        style="
+           {
+            cursor: 'click';
+          }
+        "
+        @click="sentTo(item.link)"
+      >
+        {{ item.icon }}
+      </v-icon>
     </v-row>
     <v-row class="d-flex justify-center mt-5">
       <v-img
@@ -21,6 +34,31 @@
 <script>
 export default {
   name: "FooterComponent",
+  data: () => ({
+    items: [
+      {
+        icon: "mdi-facebook",
+        link: "https://www.facebook.com/bornministerio",
+      },
+      {
+        icon: "mdi-instagram",
+        link: "https://www.instagram.com/bornministerio/",
+      },
+      {
+        icon: "mdi-spotify",
+        link: "https://open.spotify.com/show/5JXqcW2WDote4VMPiJiUjp?si=60219b3883ee4a43",
+      },
+      {
+        icon: "mdi-youtube",
+        link: "https://www.youtube.com/@bornministerio6293",
+      },
+    ],
+  }),
+  methods: {
+    sentTo: (url) => {
+      window.location.href = url;
+    },
+  },
 };
 </script>
 

@@ -29,7 +29,7 @@ export default {
         title: "BORN I",
         data: "(2019)",
         subtitle: "Preparado para nascer de novo? ",
-        text: " Primeira edição do evento com mais de 70 participantes, o evento foi cheio de entrega, novas experiências com Jesus, aprendizados pessoais,  esportes radicais e o mais importe experienciar o derramamento do Espírito Santo. ",
+        text: " Primeira edição do evento com mais de 70 participantes, o evento foi cheio de entrega, novas experiências com Jesus, aprendizados pessoais,  esportes radicais e o mais importante, experienciar o derramamento do Espírito Santo. ",
       },
       {
         title: "BORN II",
@@ -47,6 +47,6 @@ export default {
   font-family: "LeagueGothic" !important;
 }
 .history {
-  box-shadow: 10px 16px 0px 0 #200038 !important;
+  box-shadow: 10px 16px 0px 0 #1b0766 !important;
 }
 </style>
