@@ -1,25 +1,35 @@
 <template>
-  <v-container fluid id="title-introduction" class="d-flex align-center">
-    <v-img lazy-src="@/assets/background.png" src="@/assets/background.png">
-      <v-container
-        id="subtitle-introduction"
-        class="d-flex flex-column justify-center align-center"
-      >
-        <v-img
-          class="logo-born"
-          max-height="600"
-          max-width="600"
-          lazy-src="@/assets/logo.png"
-          src="@/assets/logo.png"
-        ></v-img>
-        <!-- <div
-          class="text-center text-h4 title-born"
-          style="margin-top: -100px; font-size: 25px"
-        >
-          Não somos um retiro convencional, somos uma experiência pessoal!
-        </div> -->
-      </v-container>
-    </v-img>
+  <v-container
+    fluid
+    id="title-introduction"
+    class="d-flex justify-space-around flex-column p-5"
+  >
+    <v-btn
+      outlined
+      elevation="2"
+      color=" white white--text title-born "
+      style="width: 200px; margin: 50px auto 0"
+      rounded
+      >28/04 ABR | 2023</v-btn
+    >
+
+    <v-img
+      class="logo-born"
+      max-height="300"
+      max-width="300"
+      style="margin: 0 auto"
+      lazy-src="@/assets/logo.png"
+      src="@/assets/logo.png"
+    ></v-img>
+    <v-btn
+      @click="scrollTo"
+      outlined
+      elevation="2"
+      color=" white white--text title-born "
+      style="width: 200px; margin: 0 auto 50px"
+      rounded
+      >Inscreva-se</v-btn
+    >
   </v-container>
 </template>
 
@@ -28,6 +38,13 @@ export default {
   name: "IntroductionComponent",
 
   data: () => ({}),
+  methods: {
+    scrollTo() {
+      document
+        .getElementById("subscribe")
+        ?.scrollIntoView({ behavior: "smooth" });
+    },
+  },
 };
 </script>
 
@@ -36,6 +53,13 @@ export default {
   min-height: 90vh;
   z-index: 0;
   padding: 0;
+  background: url("../assets/background.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  height: 100px !important;
+  width: 100%;
 }
 
 .title-born {
@@ -52,6 +76,10 @@ export default {
   .title-born {
     font-size: 20px !important;
     color: #a6a6a6;
+  }
+
+  #title-introduction {
+    background-size: 200% 70%;
   }
 }
 </style>
