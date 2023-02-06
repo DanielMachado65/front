@@ -1,5 +1,5 @@
 <template>
-  <v-row justify="center">
+  <v-row justify="center" id="subscribe">
     <v-col cols="12" md="10">
       <v-card class="mx-auto my-12 primary subscribe" elevation="10">
         <v-card-title
@@ -86,6 +86,7 @@ export default {
           });
     },
   },
+
   data: () => ({
     user: {},
     loading: false,
