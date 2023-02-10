@@ -5,7 +5,12 @@
       id="title-introduction"
       class="d-flex justify-space-around flex-column p-5"
     >
-      <p class="text-h5 font-weight-black text-center">28 ABR | 2023</p>
+      <p
+        class="text-h5 font-weight-black text-center"
+        style="font-size: 1.3rem !important"
+      >
+        28 ABR | 2023
+      </p>
 
       <v-img
         class="logo-born"
@@ -21,12 +26,12 @@
         @click="scrollTo"
         outlined
         elevation="2"
-        color=" white white--text font-weight-black title-born"
+        color=" white white--text font-weight-bold title-born text-uppercase"
         style="width: 200px; margin: 0 auto 50px"
         rounded
       >
-        QUERO PARTICIPAR</v-btn
-      >
+        <strong>quero participar </strong>
+      </v-btn>
     </v-container>
     <v-container
       fluid
