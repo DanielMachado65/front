@@ -5,7 +5,7 @@
       id="title-introduction"
       class="d-flex justify-space-around flex-column p-5"
     >
-      <p class="text-h4 font-weight-black text-center">28 ABR | 2023</p>
+      <p class="text-h5 font-weight-black text-center">28 ABR | 2023</p>
 
       <v-img
         class="logo-born"
@@ -28,13 +28,17 @@
         QUERO PARTICIPAR</v-btn
       >
     </v-container>
-    <v-container class="d-flex justify-center align-center">
+    <v-container
+      fluid
+      style="padding: 0 auto; margin: 0 auto"
+      class="d-flex justify-center align-center subtitle-histories"
+    >
       <ArrowComponent />
       <p
-        class="text--white text-h5 font-weight-light text-uppercase"
-        style="margin-bottom: 0"
+        class="text--white subtitle-1 font-weight-light text-uppercase"
+        style="margin-bottom: 0; word-wrap: break-word"
       >
-        Veja o que rolou nas edições anteriores
+        <strong>Veja o que rolou nas edições anteriores</strong>
       </p>
       <ArrowComponent />
     </v-container>
