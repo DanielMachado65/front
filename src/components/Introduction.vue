@@ -1,42 +1,52 @@
 <template>
-  <v-container
-    fluid
-    id="title-introduction"
-    class="d-flex justify-space-around flex-column p-5"
-  >
-    <v-btn
-      outlined
-      elevation="2"
-      color=" white white--text title-born "
-      style="width: 200px; margin: 50px auto 0"
-      rounded
-      >28/04 ABR | 2023</v-btn
+  <div>
+    <v-container
+      fluid
+      id="title-introduction"
+      class="d-flex justify-space-around flex-column p-5"
     >
+      <p class="text-h4 font-weight-black text-center">28 ABR | 2023</p>
 
-    <v-img
-      class="logo-born"
-      max-height="300"
-      max-width="300"
-      style="margin: 0 auto"
-      lazy-src="@/assets/logo.png"
-      src="@/assets/logo.png"
-    ></v-img>
-    <v-btn
-      @click="scrollTo"
-      outlined
-      elevation="2"
-      color=" white white--text title-born "
-      style="width: 200px; margin: 0 auto 50px"
-      rounded
-      >Inscreva-se</v-btn
-    >
-  </v-container>
+      <v-img
+        class="logo-born"
+        max-height="350"
+        max-width="350"
+        style="margin: 0 auto"
+        lazy-src="@/assets/logo.png"
+        src="@/assets/logo.png"
+      ></v-img>
+      <!-- <p class="text-center text-h1 font-weight-bold title-born">BORN III</p> -->
+
+      <v-btn
+        @click="scrollTo"
+        outlined
+        elevation="2"
+        color=" white white--text font-weight-black title-born"
+        style="width: 200px; margin: 0 auto 50px"
+        rounded
+      >
+        QUERO PARTICIPAR</v-btn
+      >
+    </v-container>
+    <v-container class="d-flex justify-center align-center">
+      <ArrowComponent />
+      <p
+        class="text--white text-h5 font-weight-light text-uppercase"
+        style="margin-bottom: 0"
+      >
+        Veja o que rolou nas edições anteriores
+      </p>
+      <ArrowComponent />
+    </v-container>
+  </div>
 </template>
 
 <script>
+import ArrowComponent from "./Arrows.vue";
+
 export default {
   name: "IntroductionComponent",
-
+  components: { ArrowComponent },
   data: () => ({}),
   methods: {
     scrollTo() {
