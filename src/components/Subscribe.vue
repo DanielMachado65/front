@@ -71,7 +71,7 @@
             class="black--text"
             @click="submit"
             width="200"
-            :disabled="done"
+            :disabled="done || !checkbox"
           >
             Enviar!
           </v-btn>
@@ -92,6 +92,7 @@ export default {
       if (this.user.name == undefined) showError("O nome está vazio");
       if (!this.checkbox) showError("Você precisa aprovar os termos");
       this.loading = true;
+      this.checkbox = false;
 
       if (this.user.email && this.user.name)
         OrderService.create({ ...this.user })
