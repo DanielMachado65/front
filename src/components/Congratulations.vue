@@ -13,7 +13,8 @@
           <br />
           <br />
           <br />
-          Logo enviaremos mais informações sobre o evento.
+          Logo enviaremos mais informações do evento no seu email, fica de olho
+          por lá.
         </p>
       </v-col>
     </v-row>

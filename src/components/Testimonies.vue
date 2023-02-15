@@ -60,7 +60,7 @@ export default {
         overline: "Born I",
         title: "Alana Beatriz",
         description:
-          "Foi o melhor, a melhor experiência que tive pessoal e com Deus estava presente! Foi incrível 😍",
+          "Foi a melhor experiência que tive pessoal e com Deus estava presente! Foi incrível 😍",
       },
       {
         id: 2,

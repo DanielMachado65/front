@@ -2,7 +2,7 @@
   <v-container id="about">
     <v-row>
       <v-col class="d-flex flex-column justify-center" cols="12" sm="6">
-        <div class="text-h2 title-born">BORN 3</div>
+        <div class="text-h2 title-born">BORN III</div>
         <div class="text-h5">A morte!</div>
         <div class="subtitle-2 mt-4">
           Na última edição do BØRN, a experiência nunca mais será a mesma. A
