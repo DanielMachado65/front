@@ -34,6 +34,28 @@
             :rules="[rules.required, rules.email]"
             required
           />
+          <v-checkbox v-model="checkbox" color="secondary">
+            <template v-slot:label>
+              <div class="subtitle-2">
+                Estou ciente dos
+                <v-tooltip location="bottom">
+                  <template v-slot:activator="{ props }">
+                    <a
+                      class="white--text"
+                      target="_blank"
+                      href="https://docs.google.com/document/d/1k3ZvXdJAiAGgBLCq0Sls8exZXKDLILzFlinyWNlHdSg/edit?usp=sharing"
+                      v-bind="props"
+                      @click.stop
+                    >
+                      termos
+                    </a>
+                  </template>
+                  Vai abrir em uma nova janela
+                </v-tooltip>
+                na aquisição do ingresso
+              </div>
+            </template>
+          </v-checkbox>
         </v-card-text>
         <div v-else class="d-flex justify-center my-10">
           <v-progress-circular
@@ -68,6 +90,7 @@ export default {
     submit() {
       if (this.user.email == undefined) showError("O e-mail está vazio");
       if (this.user.name == undefined) showError("O nome está vazio");
+      if (!this.checkbox) showError("Você precisa aprovar os termos");
       this.loading = true;
 
       if (this.user.email && this.user.name)
@@ -91,6 +114,7 @@ export default {
     user: {},
     loading: false,
     done: false,
+    checkbox: false,
     rules: {
       required: (value) => !!value || "Requerido.",
       email: (value) => {
