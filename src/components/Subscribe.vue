@@ -19,7 +19,7 @@
         </div>
         <v-card-text v-else-if="!loading" class="mt-5">
           <v-row>
-            <v-col>
+            <v-col cols="12" md="6">
               <v-text-field
                 color="white"
                 label="Nome"
@@ -30,7 +30,7 @@
                 required
               />
             </v-col>
-            <v-col>
+            <v-col cols="12" md="6">
               <v-text-field
                 color="white"
                 label="Telefone"
@@ -38,7 +38,7 @@
                 hint="(xx)xxxx-xxxx"
                 outlined
                 v-model="user.telephone"
-                :rules="[telefoneRule]"
+                :rules="[telefoneRule, rules.required]"
                 required
               />
             </v-col>
