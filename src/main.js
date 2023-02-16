@@ -8,6 +8,7 @@ import * as VueGoogleMaps from "vue2-google-maps";
 // plugins
 import "./plugins/axios";
 import "./plugins/msg";
+import "./plugins/mask";
 
 // fonts
 import "./assets/LeagueGothic-Regular-VariableFont_wdth.ttf";
