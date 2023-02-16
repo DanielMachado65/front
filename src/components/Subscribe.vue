@@ -18,22 +18,45 @@
           </v-card-subtitle>
         </div>
         <v-card-text v-else-if="!loading" class="mt-5">
-          <v-text-field
-            color="white"
-            label="Name"
-            outlined
-            v-model="user.name"
-            :rules="[rules.required]"
-            required
-          />
-          <v-text-field
-            color="white"
-            label="E-mail"
-            outlined
-            v-model="user.email"
-            :rules="[rules.required, rules.email]"
-            required
-          />
+          <v-row>
+            <v-col>
+              <v-text-field
+                color="white"
+                label="Nome"
+                hint="Nome Completo"
+                outlined
+                v-model="user.name"
+                :rules="[rules.required]"
+                required
+              />
+            </v-col>
+            <v-col>
+              <v-text-field
+                color="white"
+                label="Telefone"
+                v-mask="'(##)#####-####'"
+                hint="(xx)xxxx-xxxx"
+                outlined
+                v-model="user.telephone"
+                :rules="[telefoneRule]"
+                required
+              />
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <v-text-field
+                hint="exemplo@dominio.com"
+                color="white"
+                label="E-mail"
+                outlined
+                v-model="user.email"
+                :rules="[rules.required, rules.email]"
+                required
+              />
+            </v-col>
+          </v-row>
+
           <v-checkbox v-model="checkbox" color="secondary">
             <template v-slot:label>
               <div class="subtitle-2">
@@ -88,8 +111,20 @@ export default {
   name: "SubscribeComponent",
   methods: {
     submit() {
-      if (this.user.email == undefined) showError("O e-mail está vazio");
-      if (this.user.name == undefined) showError("O nome está vazio");
+      if (this.user.email == "") showError("O e-mail está vazio");
+      if (this.user.name == "") showError("O nome está vazio");
+
+      if (
+        !/^(\([1-9]{2}\))?([0-9]{5}-[0-9]{4})$/.test(
+          this.user.telephone?.replace(/ /g, "")
+        )
+      )
+        showError(
+          `O telefone informado: [${
+            this.user.telephone || "campo vazio"
+          }] não é válido no padrão: (XX)XXXXX-XXXX`
+        );
+
       if (!this.checkbox) showError("Você precisa aprovar os termos");
       this.loading = true;
       this.checkbox = false;
@@ -116,14 +151,16 @@ export default {
     loading: false,
     done: false,
     checkbox: false,
+    telefoneRule: [(v) => !!v || "Telefone é obrigatório"],
     rules: {
       required: (value) => !!value || "Requerido.",
-      email: (value) => {
-        const pattern =
-          /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-        return pattern.test(value?.replace(/ /g, "")) || "E-mail inválido";
-      },
+      email: (value) =>
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+          value?.replace(/ /g, "")
+        ) || "E-mail inválido",
+      telephone: (v) =>
+        /^(\([1-9]{2}\))?([0-9]{5}-[0-9]{4})$/.test(v?.replace(/ /g, "")) ||
+        "Telefone inválido",
     },
   }),
 };
