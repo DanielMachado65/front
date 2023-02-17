@@ -147,8 +147,10 @@ export default {
       if (email && name) {
         this.user.telephone = {
           area_code,
-          telephone: telephone.split(")")[0],
+          telephone: telephone.split(")")[1].replace("-", ""),
         };
+
+        console.log(this.user);
 
         OrderService.create({ ...this.user })
           .then((data) => {
