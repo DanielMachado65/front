@@ -11,7 +11,7 @@
           Faça sua inscrição
         </v-card-subtitle>
 
-        <div class="d-flex justify-center my-10 flex-column" v-if="done">
+        <div class="d-flex justify-center my-10 flex-column" v-if="ready">
           <v-icon size="72" color="green darken-2"> mdi-check-circle </v-icon>
           <v-card-subtitle class="text-center white--text">
             vamos redirecionar você para o checkout do Pagar.me
@@ -22,7 +22,8 @@
             <v-col cols="12" md="6">
               <v-text-field
                 color="white"
-                label="Nome"
+                label="name"
+                placeholder="Nome"
                 hint="Nome Completo"
                 outlined
                 v-model="user.name"
@@ -33,12 +34,13 @@
             <v-col cols="12" md="6">
               <v-text-field
                 color="white"
-                label="Telefone"
+                label="telephone"
+                placeholder="Telefone"
                 v-mask="'(##)#####-####'"
                 hint="(xx)xxxx-xxxx"
                 outlined
                 v-model="user.telephone"
-                :rules="[telefoneRule, rules.required]"
+                :rules="[rules.required, rules.telephone]"
                 required
               />
             </v-col>
@@ -48,7 +50,8 @@
               <v-text-field
                 hint="exemplo@dominio.com"
                 color="white"
-                label="E-mail"
+                label="email"
+                placeholder="E-mail"
                 outlined
                 v-model="user.email"
                 :rules="[rules.required, rules.email]"
@@ -94,7 +97,7 @@
             class="black--text"
             @click="submit"
             width="200"
-            :disabled="done || !checkbox"
+            :disabled="ready || !checkbox"
           >
             Enviar!
           </v-btn>
@@ -107,29 +110,46 @@
 <script>
 import { OrderService } from "@/services";
 import { showError } from "@/global";
+
+const trim = (value) => value?.replace(/ /g, "");
+
+const validateEmail = (value) =>
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
+    trim(value)
+  );
+
+const validateTelephone = (value) =>
+  /^(\([1-9]{2}\))?([0-9]{5}-[0-9]{4})$/.test(trim(value));
+
 export default {
   name: "SubscribeComponent",
   methods: {
     submit() {
-      if (this.user.email == "") showError("O e-mail está vazio");
-      if (this.user.name == "") showError("O nome está vazio");
+      const { email, name, telephone } = this.user;
+      const area_code = telephone.split(")")[0].substring(1);
 
-      if (
-        !/^(\([1-9]{2}\))?([0-9]{5}-[0-9]{4})$/.test(
-          this.user.telephone?.replace(/ /g, "")
-        )
-      )
-        showError(
+      if (!name || name == "") return showError("O nome está vazio");
+
+      if (!validateTelephone(telephone))
+        return showError(
           `O telefone informado: [${
-            this.user.telephone || "campo vazio"
+            telephone || "campo vazio"
           }] não é válido no padrão: (XX)XXXXX-XXXX`
         );
 
-      if (!this.checkbox) showError("Você precisa aprovar os termos");
+      if (!email || !validateEmail(email))
+        return showError(`O e-mail: ${email || ""} está vazio`);
+
+      if (!this.checkbox) return showError("Você precisa aprovar os termos");
       this.loading = true;
       this.checkbox = false;
 
-      if (this.user.email && this.user.name)
+      if (email && name) {
+        this.user.telephone = {
+          area_code,
+          telephone: telephone.split(")")[0],
+        };
+
         OrderService.create({ ...this.user })
           .then((data) => {
             this.loading = false;
@@ -143,24 +163,19 @@ export default {
             console.log(error);
             showError(error);
           });
+      }
     },
   },
 
   data: () => ({
     user: {},
     loading: false,
-    done: false,
+    ready: false,
     checkbox: false,
-    telefoneRule: [(v) => !!v || "Telefone é obrigatório"],
     rules: {
-      required: (value) => !!value || "Requerido.",
-      email: (value) =>
-        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
-          value?.replace(/ /g, "")
-        ) || "E-mail inválido",
-      telephone: (v) =>
-        /^(\([1-9]{2}\))?([0-9]{5}-[0-9]{4})$/.test(v?.replace(/ /g, "")) ||
-        "Telefone inválido",
+      required: (v) => !!v || "Requerido.",
+      email: (v) => validateEmail(v) || "E-mail inválido",
+      telephone: (v) => validateTelephone(v) || "Telefone inválido",
     },
   }),
 };
