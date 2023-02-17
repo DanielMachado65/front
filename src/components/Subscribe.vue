@@ -111,7 +111,7 @@
 import { OrderService } from "@/services";
 import { showError } from "@/global";
 
-const trim = (value) => value?.replace(/ /g, "");
+const trim = (value) => value && value.replace(/ /g, "");
 
 const validateEmail = (value) =>
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(
