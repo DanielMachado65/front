@@ -37,6 +37,12 @@ export default {
         subtitle: "Maturidade espiritual. ",
         text: "Na segunda edição Deus nos mostrou a dependência total dEle. Depois de um acidente na cozinha ter queimado todas as comidas e utensílios do evento, vimos o agir de Deus em uma experiência imersiva de dependência e intimidade única e só quem estava lá pode descrever a atmosfera que foi criada de união e entrega a Deus. O fogo queimou e tudo se fez novo!",
       },
+      {
+        title: "BORN III",
+        data: "(2023)",
+        subtitle: "A Morte",
+        text: 'Na última edição do BØRN, a experiência nunca mais seria a mesma. A explicação da "morte" tinha chegado e com ela íamos juntos caminhar para a salvação em Cristo Jesus, nosso senhor. Tínhamos convidado as pessoas a viverem tudo isso, pois era só o primeiro passo da sua história com Jesus.',
+      },
     ],
   }),
 };
