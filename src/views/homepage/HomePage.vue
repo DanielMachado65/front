@@ -1,19 +1,20 @@
 <template>
   <div>
     <div v-if="orderId">
-      <Congratulations :order-id="orderId"/>
+      <Congratulations :order-id="orderId" />
     </div>
     <div v-else>
-      <Introduction/>
+      <Introduction />
 
       <v-container class="HomePage">
-        <History/>
+        <History />
 
         <!-- footer  -->
-        <Testimonies/>
+        <Testimonies />
       </v-container>
+      <div style="margin-bottom: 100px"></div>
 
-      <v-container fluid class="theme--dark mt-12">
+      <!-- <v-container fluid class="theme--dark mt-12">
         <About/>
       </v-container>
 
@@ -23,13 +24,18 @@
             <subscribe/>
           </v-col>
         </v-row>
-      </v-container>
+      </v-container> -->
     </div>
   </div>
 </template>
 
 <script>
-import {About, Congratulations, History, Introduction, Subscribe, Testimonies,} from "@/components";
+import {
+  Congratulations,
+  History,
+  Introduction,
+  Testimonies,
+} from "@/components";
 
 export default {
   components: {
@@ -37,8 +43,6 @@ export default {
     History,
     Congratulations,
     Testimonies,
-    About,
-    Subscribe,
   },
   data: () => ({
     orderId: "",
