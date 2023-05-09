@@ -5,12 +5,12 @@
       id="title-introduction"
       class="d-flex justify-space-around flex-column p-5"
     >
-      <p
+      <!-- <p
         class="text-h5 font-weight-black text-center"
         style="font-size: 1.3rem !important"
       >
         28 ABR | 2023
-      </p>
+      </p> -->
 
       <v-img
         class="logo-born"
@@ -22,7 +22,7 @@
       ></v-img>
       <!-- <p class="text-center text-h1 font-weight-bold title-born">BORN III</p> -->
 
-      <v-btn
+      <!-- <v-btn
         @click="scrollTo"
         outlined
         elevation="2"
@@ -31,7 +31,7 @@
         rounded
       >
         <strong>quero participar </strong>
-      </v-btn>
+      </v-btn> -->
     </v-container>
     <v-container
       fluid

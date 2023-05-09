@@ -145,14 +145,14 @@ export default {
       this.checkbox = false;
 
       if (email && name) {
-        this.user.telephone = {
+        const telephone_with_area_code = {
           area_code,
           telephone: telephone.split(")")[1].replace("-", ""),
         };
 
-        console.log(this.user);
+        console.log({ ...this.user, ...telephone_with_area_code });
 
-        OrderService.create({ ...this.user })
+        OrderService.create({ ...this.user, ...telephone_with_area_code })
           .then((data) => {
             this.loading = false;
             this.done = true;
